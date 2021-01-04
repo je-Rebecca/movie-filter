@@ -1,0 +1,115 @@
+:root {
+  --logo-size: 100px;
+  --icorn-size: 50px;
+  --nav-color: rgb(9, 27, 51);
+  --yellow-color: wheat;
+  --green-color: rgb(99, 175, 99);
+  --white-color: white;
+  --padding: 10px;
+  --thumb-width: 80px;
+  --thumb-height: 100px;
+  --animation-duration: 300ms;
+  --font-size: 40px;
+}
+
+body {
+  background-color: var(--nav-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.titleBox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.question {
+  width: calc(var(--icorn-size) / 2);
+  height: calc(var(--icorn-size) / 2);
+  margin: auto;
+  margin-right: var(--padding);
+  margin-top: var(--padding);
+  justify-items: flex-end;
+}
+
+.logoBox {
+  display: flex;
+}
+
+.subtitle {
+  color: var(--white-color);
+  font-size: var(--font-size);
+  justify-content: center;
+  margin: auto;
+}
+.logo {
+  justify-content: center;
+  text-align: center;
+  width: var(--logo-size);
+  height: var(--logo-size);
+  cursor: pointer;
+  transition: transform var(--animation-duration) ease;
+}
+.logo:hover {
+  transform: scale(1.1);
+}
+.icron {
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px 0px;
+  align-items: center;
+}
+.kor {
+  border-radius: calc(var(--icorn-size) / 2);
+}
+.icron .btn {
+  outline: none;
+  border: none;
+  transition: transform var(--animation-duration) ease;
+  padding: var(--padding);
+  cursor: pointer;
+  background-color: transparent;
+  background-color: var(--yellow-color);
+}
+.icron .btn:hover {
+  transform: scale(1.1);
+}
+.icron .long {
+}
+.icron .short {
+  background-color: var(--green-color);
+}
+.icn {
+  cursor: pointer;
+  width: var(--icorn-size);
+  height: var(--icorn-size);
+  transition: transform var(--animation-duration) ease;
+}
+.icn:hover {
+  transform: scale(1.1);
+}
+
+.mList {
+  list-style: none;
+  width: 70%;
+  padding-left: 0px;
+  height: 100%;
+  /* background-color: orange; */
+  overflow-y: scroll;
+}
+.mList li {
+  background-color: var(--white-color);
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  align-items: center;
+  margin-bottom: var(--padding);
+}
+.mList li .thumb {
+  width: var(--thumb-width);
+  height: var(--thumb-height);
+  padding: var(--padding);
+}
