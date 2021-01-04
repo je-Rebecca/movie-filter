@@ -1,12 +1,7 @@
 function loadItems() {
-  return fetch(
-    'https://yts-proxy.nomadcoders1.now.sh/list_movies.json'
-    // 'http://175.125.91.94/oasis/service/rest/meta16/getkobis04'
-    // 'http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=f5eef3421c602c6cb7ea224104795888&targetDt=20120101'
-  )
+  return fetch('https://yts-proxy.nomadcoders1.now.sh/list_movies.json')
     .then((response) => response.json())
     .then((json) => json.data.movies);
-  // .then((data) => console.log(data.boxOfficeResult.dailyBoxOfficeList));
 }
 
 function displayMovie(movies) {
@@ -26,8 +21,8 @@ function createHTMLString(movies) {
 
 function onButtonClick(event, movies) {
   const dataset = event.target.dataset;
-  const key = dataset.key; //genre
-  const value = dataset.value; //comedy ...
+  const key = dataset.key; //language
+  const value = dataset.value; //ko, en ...
   if (key == null || value == null) {
     return;
   }
